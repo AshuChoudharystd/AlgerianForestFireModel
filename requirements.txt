@@ -1,4 +1,6 @@
-Flask
-numpy
+numpy~=1.26.4
+flask~=3.0.3
+matplotlib
 pandas
 scikit-learn
+seaborn
