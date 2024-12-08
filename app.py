@@ -34,12 +34,12 @@ def predict_datapoint():
         new_scaled_data = standard_scaler.transform([[temperature,RH,WS,rain,FFMC,DMC,ISI,classes,region]])
         result = ridge_model.predict(new_scaled_data)
 
-        return render_template('home.html',result=result[0])
+        return render_template('index.html',result=result[0])
     else:
-        return render_template('home.html')
+        return render_template('index.html')
 
 
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0')
+    app.run(host='0.0.0.0',debug=True,port=5000)
